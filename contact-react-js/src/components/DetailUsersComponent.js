@@ -16,7 +16,7 @@ const DetailUsersComponent = (props) => {
             <CardImg top width="100%" src={props.getUsersDetail.photo} alt="No Image" />
             <CardBody>
                 <CardTitle className="text-center" tag="h5">{props.getUsersDetail.firstName} {props.getUsersDetail.lastName}</CardTitle>
-                <CardSubtitle className="text-center mb-2" tag="h6">{props.getUsersDetail.age}</CardSubtitle>
+                <CardSubtitle className="text-center mb-2" tag="h6">{props.getUsersDetail.age} years</CardSubtitle>
             </CardBody>
             </Card>
       </div>

@@ -12,11 +12,12 @@ class DetailUserContainer extends Component {
 
   render() {
     return (
-      <Container>
-        <BackComponent />
-        <h1>Detail User {this.props.match.params.id}</h1>
-        <DetailUsersComponent />
-      </Container>
+      <div>
+        <Container>
+          <BackComponent />
+          <DetailUsersComponent />
+        </Container>
+      </div>
     );
   }
 }

@@ -8,19 +8,16 @@ import {
   faTrash,
   faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
-import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import ToolkitProvider from "react-bootstrap-table2-toolkit";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import swal from "sweetalert";
 import { deleteUser } from "../actions/userAction";
 
-const { SearchBar } = Search;
-
 const handleClick = (dispatch, id) => {
-  
   swal({
-    title: "Apakah Anda yakin akan menghapus data ini ?",
+    title: "Are you sure to delete this contact?",
     icon: "warning",
     buttons: true,
     dangerMode: true,
@@ -28,11 +25,11 @@ const handleClick = (dispatch, id) => {
   .then((willDelete) => {
     if (willDelete) {
       dispatch(deleteUser(id))
-      swal("Data User Sukses dihapus", {
+      swal("This contact has been deleted!", {
         icon: "success",
       });
     } else {
-      swal("Data gagal dihapus");
+      swal("This contact is safe!");
     }
   });
 }
@@ -59,7 +56,7 @@ const TableComponent = (props) => {
       sort: true,
       headerStyle: () => {
         return {
-          width: "10%",
+          width: "20%",
         };
       },
     },
@@ -67,14 +64,14 @@ const TableComponent = (props) => {
       dataField: "lastName",
       text: "Nama Akhir",
       sort: true,
+      headerStyle: () => {
+        return {
+          width: "20%",
+        };
+      },
     },
     {
       dataField: "age",
-      text: "Umur",
-      sort: true,
-    },
-    {
-      dataField: "photo",
       text: "Umur",
       sort: true,
     },
@@ -122,18 +119,10 @@ const TableComponent = (props) => {
               <Row>
                 <Col>
                   <Link to={"create"}>
-                    <Button color="dark" className="mr-2">
+                    <Button color="dark" className="mb-3">
                       <FontAwesomeIcon icon={faUserPlus} /> Create
                     </Button>
                   </Link>
-                </Col>
-                <Col>
-                  <div className="float-right">
-                    <SearchBar
-                      {...props.searchProps}
-                      placeholder="Search . . ."
-                    />
-                  </div>
                 </Col>
               </Row>
               <BootstrapTable

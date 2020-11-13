@@ -38,11 +38,13 @@ class EditUserContainer extends Component {
       }
     }
     return (
-      <Container>
+      <div>
+        <Container>
         <BackComponent />
         <h1>Edit User</h1>
         <FormComponent onSubmit={(data) => this.handleSubmit(data)} />
-      </Container>
+        </Container>
+      </div>
     );
   }
 }

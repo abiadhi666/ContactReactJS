@@ -34,11 +34,13 @@ class CreateUserContainer extends Component {
       }
     }
     return (
-      <Container>
-        <BackComponent />
-        <h1>Create User</h1>
-        <FormComponent onSubmit={(data) => this.handleSubmit(data)} />
-      </Container>
+      <div>
+        <Container>
+          <BackComponent />
+          <h1>Create User</h1>
+          <FormComponent onSubmit={(data) => this.handleSubmit(data)} />
+        </Container>
+      </div>
     );
   }
 }
