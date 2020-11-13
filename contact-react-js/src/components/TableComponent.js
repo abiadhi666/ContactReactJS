@@ -56,7 +56,7 @@ const TableComponent = (props) => {
       sort: true,
       headerStyle: () => {
         return {
-          width: "20%",
+          width: "30%",
         };
       },
     },
@@ -66,7 +66,7 @@ const TableComponent = (props) => {
       sort: true,
       headerStyle: () => {
         return {
-          width: "20%",
+          width: "30%",
         };
       },
     },
@@ -74,6 +74,11 @@ const TableComponent = (props) => {
       dataField: "age",
       text: "Umur",
       sort: true,
+      headerStyle: () => {
+        return {
+          width: "10%",
+        };
+      },
     },
     {
       dataField: "Link",
