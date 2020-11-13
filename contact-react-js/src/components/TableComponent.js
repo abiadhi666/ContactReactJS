@@ -82,18 +82,18 @@ const TableComponent = (props) => {
         return (
           <div>
             <Link to={"detail/" + row.id}>
-              <Button color="dark" className="mr-2">
+              <Button color="dark" className="mr-2 mb-2">
                 <FontAwesomeIcon icon={faInfo} /> Detail
               </Button>
             </Link>
             <Link to={"edit/" + row.id}>
-              <Button color="dark" className="mr-2">
+              <Button color="dark" className="mr-2 mb-2">
                 <FontAwesomeIcon icon={faEdit} /> Edit
               </Button>
             </Link>
             <Button
               color="dark"
-              className="mr-2"
+              className="mr-2 mb-2"
               onClick={() => handleClick(props.dispatch, row.id)}
             >
               <FontAwesomeIcon icon={faTrash} /> Delete
