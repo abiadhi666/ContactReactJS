@@ -48,4 +48,4 @@ See the section about deployment for more information.
 npm run eject
 
 # Note
-## Folder contactReactNative is source code simple CRUD contact React Native and Redux. It is not finished yet. It is because my laptop specifically for mobile development is troubleshooting and i can't fix it as soon as. That's why I make a simple CRUD with ReactJS, no React Native.
+### Folder contactReactNative is source code simple CRUD contact React Native and Redux. It is not finished yet. It is because my laptop specifically for mobile development is troubleshooting and i can't fix it as soon as. That's why I make a simple CRUD with ReactJS, no React Native.
